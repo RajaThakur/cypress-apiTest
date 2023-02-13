@@ -58,23 +58,38 @@ returns:
 Please see
 * api-test.js under cypress/api-tests
 
-Making some cases Failed intentionally
-  1) February 30 or 31 is accepted in the date format
-  2) decimal point is accepted instead of hyphen or slashes (- or /)
-  3) blank spaces are accepted in the date format fields
-  4) blank space after year
-  5) Whether the date field allows a unique character or not
-  6) blank space after date
-  7) blank space after month
-  8) zeros in the date
-  9) zeros in the month
-  10) alphabetic and alphanumeric data in the field
-  11) Enter a decimal point
-  12) invalid date and valid month, and valid year
-  13) valid date and invalid month, and valid year
-  14) valid date and valid month, and invalid year
+List of Positive and negative cases
+Positive cases
+*  1.Whether the date field allows a unique character or not
+*  2.blank space after date
+*  3.blank space after month
+*  4.zeros in the date
+*  5.zeros in the month
+*  6.valid month, date, year in mm/dd/yyyy format (14175ms)
+*  7.field accepts with backword slash
+*  8.field accepts with forward slash
+*  9.field accepts alphabets in the date format
+
+Negative cases
+*  1.February 30 or 31 is accepted in the date format
+*  2.decimal point is accepted instead of hyphen or slashes (- or /)
+*  3.blank spaces are accepted in the date format fields
+*  4.blank space after year
+*  5.alphabetic and alphanumeric data in the field
+*  6.Enter a decimal point
+*  7.invalid date and valid month, and valid year
+*  8.valid date and invalid month, and valid year
+*  9.valid date and valid month, and invalid year
+*  10.wrong month, year and date format is accepte*  d.in YYYY/dd/mm 
+*  11.field accepts the input as blank
+*  12.field accepts special character instead of the dates
+*  13.field accepts more than 4 digits for the year
+*  14.field accepts zero in all fields of the box
+*  15.field accepts blank field for one of the part of the date format
+*  16.month field accepts 13 or higher number or flags errors
+*  17.year is accepted in 3 digits or 2 digits
   
-Making some cases Pass alongwith time took to respond from server
+Some Cases result alongwith time took to respond from server
 * valid month, date, year in mm/dd/yy format (14175ms)
 * wrong month, year and date format is accepted. in yy/dd/mm (413ms)
 * field accepts the input as blank (295ms)
