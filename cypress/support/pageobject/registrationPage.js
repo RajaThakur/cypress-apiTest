@@ -1,4 +1,4 @@
-export default class RegistrationPage {
+export default class HomePage {
 
     constructor() {
         this.registrationPageLink = "[href='#/registration']";

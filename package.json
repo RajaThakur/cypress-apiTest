@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Narottam Singh",
-  "email": "narottamgla@gmail.com",
+  "author": "Raja Thakur",
+  "email": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^3.0.1"
+    "cypress": "^10.11.0"
   }
 }
