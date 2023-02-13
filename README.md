@@ -54,6 +54,8 @@ Invalid Date String
 returns:
   false
   `
+For all API test Validation,Please see
+api-test.js under cypress/api-tests
 
 Making some cases Failed intentionally
   1) February 30 or 31 is accepted in the date format
