@@ -119,7 +119,7 @@ describe('Api test', () => {
             url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-32%202:3:22',
             failOnStatusCode: false
         }).then((response) => {
-            expect(response.status, '').to.equal(429);
+            expect(response.status, '').to.equal(200);
 
 
         })
@@ -148,165 +148,165 @@ describe('Api test', () => {
 
 
     })
-})
 
-it('February 30 or 31 is accepted in the date format', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2020-02-31%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
+    it('February 30 or 31 is accepted in the date format', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2020-02-31%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
 
-    })
-
-})
-
-it('decimal point is accepted instead of hyphen or slashes (- or /)', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=016.01.01%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
+        })
 
     })
 
+    it('decimal point is accepted instead of hyphen or slashes (- or /)', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=016.01.01%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
 
-})
-
-it('blank spaces are accepted in the date format fields', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-24 %202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-
-
-})
-
-it('blank space after year', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016 -01-01%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
+        })
 
 
     })
-})
 
-it('Whether the date field allows a unique character or not', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01@-01%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
+    it('blank spaces are accepted in the date format fields', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-24 %202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(220);
 
-    })
-})
-
-it('blank space after date', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-01 %202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-})
-
-it('blank space after month', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01 -01%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-})
-
-it('zeros in the date', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-00%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-})
-
-it('zeros in the month', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-00-22%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-})
-
-it('alphabetic and alphanumeric data in the field', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=abc-01-01%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-})
-
-it('Enter a decimal point', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-0.1-01%202:3:22',
-        failOnStatusCode: false
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
-    })
-})
-
-it('invalid date and valid month, and valid year', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-35%202:3:22'
-    }).then((response) => {
-        expect(response.status, '').to.equal(200);
+        })
 
 
     })
-})
 
-it('valid date and invalid month, and valid year', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=2016-14-01%202:3:22'
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
+    it('blank space after year', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016 -01-01%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
 
 
-    })
-})
-
-it('valid date and valid month, and invalid year', () => {
-    cy.request({
-        method: 'GET',
-        url: baseURL + '/unix-timestamp-converter/?cached&s=20167-01-01%202:3:22'
-    }).then((response) => {
-        expect(response.status, '').to.equal(429);
-
+        })
     })
 
+    it('Whether the date field allows a unique character or not', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01@-01%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
 
+        })
+    })
+
+    it('blank space after date', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-01 %202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
+
+        })
+    })
+
+    it('blank space after month', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01 -01%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
+
+        })
+    })
+
+    it('zeros in the date', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-00%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
+
+        })
+    })
+
+    it('zeros in the month', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-00-22%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
+
+        })
+    })
+
+    it('alphabetic and alphanumeric data in the field', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=abc-01-01%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
+
+        })
+    })
+
+    it('Enter a decimal point', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-0.1-01%202:3:22',
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status, '').to.equal(429);
+
+        })
+    })
+
+    it('invalid date and valid month, and valid year', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-35%202:3:22',
+
+        }).then((response) => {
+            expect(response.status, '').to.equal(200);
+
+
+        })
+    })
+
+    it('valid date and invalid month, and valid year', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-14-01%202:3:22'
+        }).then((response) => {
+            expect(response.status, '').to.equal(200);
+
+
+        })
+    })
+
+    it('valid date and valid month, and invalid year', () => {
+        cy.request({
+            method: 'GET',
+            url: baseURL + '/unix-timestamp-converter/?cached&s=20167-01-01%202:3:22'
+        }).then((response) => {
+            expect(response.status, '').to.equal(200);
+
+        })
+
+    })
 })

@@ -2,67 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3510a4-b128-4cc3-aaa1-3782ba39e813" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cypress_tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api-assignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/fixtures/example.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/actions.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/aliasing.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/assertions.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/connectors.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/cookies.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/cypress_api.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/files.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/local_storage.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/location.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/misc.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/navigation.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/network_requests.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/querying.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/spies_stubs_clocks.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/traversal.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/utilities.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/viewport.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/waiting.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/integration/examples/window.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/plugins/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/support/commands.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/cypress/support/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/api/get.api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/api/todos_api_tests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/actions.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/aliasing.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/assertions.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/connectors.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/cookies.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/cypress_api.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/files.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/local_storage.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/location.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/misc.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/navigation.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/network_requests.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/querying.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/spies_stubs_clocks.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/traversal.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/utilities.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/viewport.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/waiting.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/examples/window.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/specs-angular/miscellaneous.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/specs-angular/recorded.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/specs-angular/register-withpageobject.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/specs-angular/register.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/specs/assertion-spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/specs/register.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/pageobject/registrationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/pageobject/registrationPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/e2e/api-test/api-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/api-test/api-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +76,7 @@
       <workItem from="1537117452182" duration="868000" />
       <workItem from="1537119319535" duration="623000" />
       <workItem from="1537149165509" duration="1791000" />
-      <workItem from="1676266535159" duration="8423000" />
+      <workItem from="1676266535159" duration="10473000" />
     </task>
     <servers />
   </component>

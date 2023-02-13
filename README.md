@@ -31,6 +31,25 @@ Bonus task: tell us how the API can be improved.
 
 
 Sample screenshot for all test post run
+* ` To Convert From Date String to Unix TimeStamp
+API example:
+  https://helloacm.com/api/unix-timestamp-converter/?cached&s=2016-01-01%202:3:22
+returns: 
+  1451613802
+  `
+  
+* `To Convert From Unix TimeStamp to Date String
+API example:
+  https://helloacm.com/api/unix-timestamp-converter/?cached&s=1451613802
+returns:
+  "2016-01-01 02:03:22"
+Invalid Date String
+ `
+* `API example:
+  https://helloacm.com/api/unix-timestamp-converter/?cached&s=asdfasd
+returns:
+  false
+  `
 
 Making some cases Failed intentionally
   1) February 30 or 31 is accepted in the date format
@@ -48,18 +67,17 @@ Making some cases Failed intentionally
   13) valid date and invalid month, and valid year
   14) valid date and valid month, and invalid year
   
-Making some cases Pass 
-   ` √ valid month, date, year in mm/dd/yy format (14175ms)
-    √ wrong month, year and date format is accepted. in yy/dd/mm (413ms)
-    √ field accepts the input as blank (295ms)
-    √ field accepts with backword slash (223ms)
-    √ field accepts with forward slash (209ms)
-    √ field accepts special character instead of the dates (214ms)
-    √ field accepts more than 4 digits for the year (240ms)
-    √ field accepts zero in all fields of the box (222ms)
-    √ field accepts blank field for one of the part of the date format (225ms)
-    √ field accepts alphabets in the date format (251ms)
-    √ month field accepts 13 or higher number or flags errors (240ms)
-    √ year is accepted in 3 digits or 2 digits (349ms)
-`
+Making some cases Pass alongwith time took to respond from server
+* valid month, date, year in mm/dd/yy format (14175ms)
+* wrong month, year and date format is accepted. in yy/dd/mm (413ms)
+* field accepts the input as blank (295ms)
+* field accepts with backword slash (223ms)
+* field accepts with forward slash (209ms)
+* field accepts special character instead of the dates (214ms)
+* field accepts more than 4 digits for the year (240ms)
+* field accepts zero in all fields of the box (222ms)
+* field accepts blank field for one of the part of the date format (225ms)
+* field accepts alphabets in the date format (251ms)
+* month field accepts 13 or higher number or flags errors (240ms)
+* year is accepted in 3 digits or 2 digits (349ms)
 
