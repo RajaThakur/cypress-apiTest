@@ -6,7 +6,7 @@
 * Written in Javascript
 
 ## Setup:
-* Install [Node](http://nodejs.org) (v6.x.x or later)
+* Install [Node](http://nodejs.org) (v16.x.x or later)
 * `npm install` to install the project dependencies
 
 ## Run tests:
