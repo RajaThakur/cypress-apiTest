@@ -12,8 +12,9 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
-
-
+            expect(response.duration).to.lessThan(500);
+            expect(response.body).to.be.greaterThan(999999999)
+            expect(response.body).to.be.lessThan(10000000000)
         })
     })
 
@@ -27,6 +28,9 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
+            expect(response.duration).to.lessThan(500);
+            expect(response.body).to.be.greaterThan(999999999)
+            expect(response.body).to.be.lessThan(10000000000)
 
         })
     })
@@ -39,9 +43,7 @@ describe('Api test', () => {
         }).then((response) => {
             expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
-            expect(response).to.have.property('body')
-            expect(response).to.have.property('duration')
-
+            expect(response.body).to.eq(false)
 
         })
     })
@@ -56,6 +58,9 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
+            expect(response.duration).to.lessThan(500);
+            expect(response.body).to.be.greaterThan(999999999)
+            expect(response.body).to.be.lessThan(10000000000)
 
 
         })
@@ -71,6 +76,7 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
+            expect(response.body).to.eq(false)
 
 
         })
@@ -86,6 +92,7 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
+            expect(response.body).to.eq(false)
 
 
         })
@@ -101,6 +108,7 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
+            expect(response.body).to.eq(false)
 
 
         })
@@ -116,6 +124,7 @@ describe('Api test', () => {
             expect(response.status, '').to.equal(200);
             expect(response).to.have.property('body')
             expect(response).to.have.property('duration')
+            expect(response.body).to.lessThan(-1)
 
 
         })
