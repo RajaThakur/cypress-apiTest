@@ -13,6 +13,10 @@
 * `cypress open` in project root to start the cypress server
 * and select the spec file to run the spec
 
+or
+* `npx cypress run` in project root to start the cypress server
+* It would give summary alongwith run results on commands prompt
+
 ## Assignment Description:
 Automation testing practical test task
 

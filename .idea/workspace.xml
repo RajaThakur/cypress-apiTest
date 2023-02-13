@@ -4,8 +4,6 @@
     <list default="true" id="ec3510a4-b128-4cc3-aaa1-3782ba39e813" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/api-test/api-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/api-test/api-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,7 @@
       <workItem from="1537117452182" duration="868000" />
       <workItem from="1537119319535" duration="623000" />
       <workItem from="1537149165509" duration="1791000" />
-      <workItem from="1676266535159" duration="10473000" />
+      <workItem from="1676266535159" duration="10612000" />
     </task>
     <servers />
   </component>
