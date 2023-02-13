@@ -5,9 +5,13 @@ describe('Api test', () => {
     it('valid month, date, year in mm/dd/yy format', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -16,10 +20,13 @@ describe('Api test', () => {
     it('wrong month, year and date format is accepted. in yy/dd/mm', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
-
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
         })
     })
@@ -27,9 +34,13 @@ describe('Api test', () => {
     it('field accepts the input as blank', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s='
+            url: baseURL + '/unix-timestamp-converter/?cached&s=',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -38,9 +49,13 @@ describe('Api test', () => {
     it('field accepts with backword slash', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016/01/01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016/01/01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
-            expect(response.status).to.equal(200);
+            expect(response).to.have.property('status')
+            expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -49,9 +64,13 @@ describe('Api test', () => {
     it('field accepts with forward slash', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016\\01\\01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016\\01\\01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -60,9 +79,13 @@ describe('Api test', () => {
     it('field accepts special character instead of the dates', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-@%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-@%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -71,9 +94,13 @@ describe('Api test', () => {
     it('field accepts more than 4 digits for the year', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=20166-01-01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=20166-01-01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -82,9 +109,13 @@ describe('Api test', () => {
     it('field accepts zero in all fields of the box', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=0000-00-00%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=0000-00-00%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -93,9 +124,13 @@ describe('Api test', () => {
     it('field accepts blank field for one of the part of the date format', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -107,7 +142,10 @@ describe('Api test', () => {
             url: baseURL + '/unix-timestamp-converter/?cached&s=2016-april-01%202:3:22',
             failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -119,7 +157,10 @@ describe('Api test', () => {
             url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-32%202:3:22',
             failOnStatusCode: false
         }).then((response) => {
+            expect(response).to.have.property('status')
             expect(response.status, '').to.equal(200);
+            expect(response).to.have.property('body')
+            expect(response).to.have.property('duration')
 
 
         })
@@ -280,7 +321,7 @@ describe('Api test', () => {
         cy.request({
             method: 'GET',
             url: baseURL + '/unix-timestamp-converter/?cached&s=2016-01-35%202:3:22',
-
+            failOnStatusCode: false
         }).then((response) => {
             expect(response.status, '').to.equal(200);
 
@@ -291,7 +332,8 @@ describe('Api test', () => {
     it('valid date and invalid month, and valid year', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-14-01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=2016-14-01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
             expect(response.status, '').to.equal(200);
 
@@ -302,7 +344,8 @@ describe('Api test', () => {
     it('valid date and valid month, and invalid year', () => {
         cy.request({
             method: 'GET',
-            url: baseURL + '/unix-timestamp-converter/?cached&s=20167-01-01%202:3:22'
+            url: baseURL + '/unix-timestamp-converter/?cached&s=20167-01-01%202:3:22',
+            failOnStatusCode: false
         }).then((response) => {
             expect(response.status, '').to.equal(200);
 
